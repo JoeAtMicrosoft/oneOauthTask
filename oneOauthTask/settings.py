@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["https://ado-oauth.azurewebsites.net",
                 "ado-oauth.azurewebsites.net", 
-                "localhost"
+                "localhost",
+                "127.0.0.1"
 
 ]
 
