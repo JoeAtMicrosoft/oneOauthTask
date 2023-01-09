@@ -17,11 +17,8 @@ def oauth(request):
     # Save the authorization token.
     file = open("oneOauthTaskApp/auth codes/authorization_code.txt", "w")
     file.write(code)
-    return render(request, 'oneOauthTaskApp/oauth.html', {"code":code})
 
     # Step 3 of the MS docs: GET ACCESS AND REFRESH TOKENS FOR THE USER. This establishes the app and server with the 3p auth server.
-def oauth_token(request):
-
     url = """https://app.vssps.visualstudio.com/oauth2/token"""
 
     # Retrieve the authorization token
@@ -40,7 +37,4 @@ def oauth_token(request):
     
     data = r.json()
     
-    return render(request, 'oneOauthTaskApp/oauth_token.html', {"data": data})
-
-    
-
+    return render(request, 'oneOauthTaskApp/oauth_token.html', {"code" : code, "data": data})
