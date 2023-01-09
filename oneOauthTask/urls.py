@@ -20,5 +20,6 @@ from oneOauthTaskApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
-    path('oauth/', views.oauth, name="oauth")
+    path('oauth/', views.oauth, name="oauth"),
+    path('oauth_token/', views.oauth_token, name="oauth_token")
 ]
